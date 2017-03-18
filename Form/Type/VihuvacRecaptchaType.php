@@ -11,8 +11,8 @@
 
 namespace Vihuvac\Bundle\RecaptchaBundle\Form\Type;
 
+use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Vihuvac\Bundle\RecaptchaBundle\Locale\LocaleResolver;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\Form\FormView;
 use Symfony\Component\Form\AbstractType;
@@ -137,7 +137,7 @@ class VihuvacRecaptchaType extends AbstractType
      */
     public function getParent()
     {
-        return TextType::class ? "form" : "text";
+        return FormType::class;
     }
 
     /**
